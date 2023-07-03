@@ -12,8 +12,11 @@ export default {
 
         //App colors:
         green: '#165d37',
+        'green-500': '#114a2c',
         app_gray: '#ecedf2',
-        app_gray_2: '#e5ebee',
+        'app-gray-2': '#e5ebee',
+        money: '#85BB65',
+        'money-500': '#77a85a',
 
         white: '#FFFFFF',
         black: '#1C2434',
@@ -45,7 +48,6 @@ export default {
         'meta-7': '#FF6766',
         'meta-8': '#F0950C',
         'meta-9': '#E5E7EB',
-        'money': '#85BB65',
         success: '#219653',
         danger: '#D34053',
         warning: '#FFA70B',
