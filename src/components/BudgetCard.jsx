@@ -1,11 +1,24 @@
 import { BarLoader } from './BarLoader';
+import { useBudgets } from './../hooks/useBudgets';
 
 const BudgetCard = ( { budget } ) => {
+
+  const { removeBudget } = useBudgets();
+
+  const handleBudgetDelete = () => {
+    console.log('budget to delete: ', budget);
+    removeBudget({ id: budget._id });
+  }
+
+  const handleBudgetDetails = () => {
+    console.log('details: ', budget);
+  }
+
   return (
     <>
       <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-2">
-        <a href="" className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-            
+        <div className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden cursor-pointer" onClick={handleBudgetDetails}>
+          <button className="text-black text-xl place-self-end mr-3 mt-1 relative float-right" onClick={handleBudgetDelete}>X</button>
           <div className="p-4">
             <h2 className="mt-2 font-bold">{budget.name}</h2>
             <span className="inline-block mb-2 px-2 py-1 leading-none bg-orange-200 text-black rounded-full font-semibold uppercase tracking-wide text-xs">
@@ -36,7 +49,7 @@ const BudgetCard = ( { budget } ) => {
               <div className="w-3/6"> <p className="text-right text-strokedark">Jun 30, 2023</p> </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </>)
 }

@@ -8,8 +8,6 @@ import { useBudgets } from '../hooks/useBudgets';
 
 export default function BudgetPage() {
   const [isOpen, setIsOpen] = useState(false);
-  // const [budgets, setBudgets] = useState([]);
-
   const { budgets } = useBudgets();
   console.log('page | budgets: ', budgets);
   // console.log('loading: ', loading);
