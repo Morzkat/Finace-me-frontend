@@ -9,7 +9,7 @@ const BudgetCard = ( { budget } ) => {
           <div className="p-4">
             <h2 className="mt-2 font-bold">{budget.name}</h2>
             <span className="inline-block mb-2 px-2 py-1 leading-none bg-orange-200 text-black rounded-full font-semibold uppercase tracking-wide text-xs">
-              { budget.wallet }
+              { budget.wallet || 'Default wallet' }
             </span>
 
             <div className="mt-3 flex items-center">
@@ -25,10 +25,10 @@ const BudgetCard = ( { budget } ) => {
               <span className="text-sm break-words text-strokedark">{budget.currency}</span>&nbsp;
             </div>
               
-            {/*TODO: Create a new component for bar loader... */}
             <BarLoader percentage={80} />
           </div>
             
+          {/*TODO: Display correct month */}
           <div className="p-4 text-xs text-gray-700">
             <div className="flex">
               {/* Current month start date and end date... */}
